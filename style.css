@@ -1,0 +1,78 @@
+body, html {
+    height:100%;
+    margin:0;
+    background-color:black;
+}
+
+#bgimg {
+    background-image: url("images/bg-image.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+}
+
+/* Inputs field */
+#input {
+    display:grid;
+    grid-template-columns: 180px 180px 100px;
+    grid-template-rows: 50px;
+    align-items:end;
+    justify-items:center;
+    align-content:center;
+    justify-content:center;
+    color:white;
+    width:60%;
+    height:20%;
+}
+
+#input>* {
+    display:grid;
+    justify-items:center;
+}
+
+input,#btn {
+    height:20px;
+    color:white;
+    background-color:transparent;
+    border:1px #AAAAAA solid ;
+    border-radius:3px;
+    text-align:center;
+}
+
+input:focus {
+    outline:none;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+#btn:hover {
+    background-color:rgba(255, 255, 255, 0.2);
+    transition-duration:200ms;
+}
+
+#btn:active {
+    background-color:rgba(255, 255, 255, 0.4);
+    transition-duration:50ms;
+}
+
+#btn {
+    height:24px;
+}
+
+/* Results section */
+#result {
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    width:100%;
+    height:50%;
+}
