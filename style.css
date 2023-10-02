@@ -1,7 +1,8 @@
 body, html {
     height:100%;
     margin:0;
-    background-color:black;
+    /*background-color:black;*/
+    background-color:white;
 }
 
 #bgimg {
@@ -44,7 +45,7 @@ input,#btn {
     height:20px;
     color:white;
     background-color:transparent;
-    border:1px #AAAAAA solid ;
+    border:2px white solid ;
     border-radius:3px;
     text-align:center;
 }
@@ -69,10 +70,48 @@ input:focus {
 }
 
 /* Results section */
-#result {
-    display:flex;
-    justify-content: center;
-    align-items: start;
+#results {
+    width:100%;
+    height:70%;
+}
+
+#dayselector {
     width:100%;
     height:50%;
+    display:grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% ;
+    grid-template-rows: 190px;
+    gap:6px;
+    justify-content: center;
+    align-content: center;
+}
+
+#dayselector>div {
+    background-color:rgba(255,255,255,0.1);
+    border: 3px solid white;
+    border-radius: 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+#dayselector>div:hover {
+    transform:scale(1.1)
+}
+
+#dayselector>div>p {
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+#dayselector>div>* {
+    margin:10px auto;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    justify-content: center;
+}
+
+#dayselector>div>img {
+    width:60%;
 }

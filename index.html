@@ -22,14 +22,78 @@
                 <button id="btn" style="width:80px;">Search</button>
                 </div>
             </div>
-            <div id="result">
-                <div>
-                    <p>Resultado!</p>
+            <div id="results">
+                <div id="dayselector">
+                    <div>
+                        <p>Yesterday</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Today</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Tuesday</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Yesterday</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Today</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Tuesday</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Today</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                    <div>
+                        <p>Tuesday</p>
+                        <img src="weather_icons/1.png">
+                        <p>30.2°C</p>
+                    </div>
+                </div>
+                <div id="information">
+                    <canvas id="graph"></canvas>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script name="chartjs" type="module" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+         const ctx = document.getElementById('graph');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+    </script>
     <script src="script.js"></script>
     <script src="cities.js"></script>
 </body>
