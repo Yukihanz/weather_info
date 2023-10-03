@@ -40,27 +40,27 @@
                         <p>30.2°C</p>
                     </div>
                     <div>
-                        <p>Yesterday</p>
+                        <p>Wednesday</p>
                         <img src="weather_icons/1.png">
                         <p>30.2°C</p>
                     </div>
                     <div>
-                        <p>Today</p>
+                        <p>Thursday</p>
                         <img src="weather_icons/1.png">
                         <p>30.2°C</p>
                     </div>
                     <div>
-                        <p>Tuesday</p>
+                        <p>Friday</p>
                         <img src="weather_icons/1.png">
                         <p>30.2°C</p>
                     </div>
                     <div>
-                        <p>Today</p>
+                        <p>Saturday</p>
                         <img src="weather_icons/1.png">
                         <p>30.2°C</p>
                     </div>
                     <div>
-                        <p>Tuesday</p>
+                        <p>Sunday</p>
                         <img src="weather_icons/1.png">
                         <p>30.2°C</p>
                     </div>
@@ -71,30 +71,8 @@
             </div>
         </div>
     </div>
-    <script name="chartjs" type="module" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-         const ctx = document.getElementById('graph');
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-    </script>
+    <script type="module" src="chartjs/dist/chart.umd.js"></script>
     <script src="script.js"></script>
-    <script src="cities.js"></script>
+    <script src="cities_list.js"></script>
 </body>
 </html>
