@@ -5,74 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weather_icons/css/weather-icons.css">
+    <link rel="stylesheet" href="weather_icons/css/weather-icons-wind.css">
+    <link rel="stylesheet" href="weather_icons/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="weather_icons/css/weather-icons.min.css">
 </head>
 <body>
     <div id="bgimg">
         <div id="content">
             <div id="input">
-                <div id="latitude">
+                <div>
                 <label>Latitude</label>
-                <input type="text">
-                </div>
-                <div id="longitude">
-                <label>Longitude</label>
-                <input type="text">
+                <input id="latitude" type="number" min="-90" max="90" step=".125">
+                <p id="latitudeWarning" style="margin:0 0"></p>
                 </div>
                 <div>
-                <button id="btn" style="width:80px;">Search</button>
+                <label>Longitude</label>
+                <input id="longitude" type="number" min="-180" max="180" step=".125">
+                <p id="longitudeWarning" style="margin:0 0"></p>
+                </div>
+                <div>
+                <button id="btn" onclick="getCoordinates()" style="width:80px;">Search</button>
                 </div>
             </div>
             <div id="results">
-                <div id="dayselector">
-                    <div>
-                        <p>Yesterday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                <div style="display:none" id="dayselector">
+                    <div onclick="updateGraph(0)">
+                        <p id="cardday0"></p>
+                        <div>
+                            <i id="cardicon0" class=""></i>
+                        </div>
+                        <p id="cardtemp0"></p>
                     </div>
-                    <div>
-                        <p>Today</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(1)">
+                        <p id="cardday1"></p>
+                        <div>
+                            <i id="cardicon1" class=""></i>
+                        </div>
+                        <p id="cardtemp1"></p>
                     </div>
-                    <div>
-                        <p>Tuesday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(2)">
+                        <p id="cardday2"></p>
+                        <div>
+                            <i id="cardicon2" class=""></i>
+                        </div>
+                        <p id="cardtemp2"></p>
                     </div>
-                    <div>
-                        <p>Wednesday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(3)">
+                        <p id="cardday3"></p>
+                        <div>
+                            <i id="cardicon3" class=""></i>
+                        </div>
+                        <p id="cardtemp3"></p>
                     </div>
-                    <div>
-                        <p>Thursday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(4)">
+                        <p id="cardday4"></p>
+                        <div>
+                            <i id="cardicon4" class=""></i>
+                        </div>
+                        <p id="cardtemp4"></p>
                     </div>
-                    <div>
-                        <p>Friday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(5)">
+                        <p id="cardday5"></p>
+                        <div>
+                            <i id="cardicon5" class="wi"></i>
+                        </div>
+                        <p id="cardtemp5"></p>
                     </div>
-                    <div>
-                        <p>Saturday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(6)">
+                        <p id="cardday6"></p>
+                        <div>
+                            <i id="cardicon6" class=""></i>
+                        </div>
+                        <p id="cardtemp6"></p>
                     </div>
-                    <div>
-                        <p>Sunday</p>
-                        <img src="weather_icons/1.png">
-                        <p>30.2°C</p>
+                    <div onclick="updateGraph(7)">
+                        <p id="cardday7"></p>
+                        <div>
+                            <i id="cardicon7" class=""></i>
+                        </div>
+                        <p id="cardtemp7"></p>
                     </div>
                 </div>
                 <div id="information">
-                    <canvas id="graph"></canvas>
+                    <canvas style="display:none" id="graph"></canvas>
                 </div>
             </div>
         </div>
     </div>
-    <script type="module" src="chartjs/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-    <script src="cities_list.js"></script>
 </body>
 </html>
